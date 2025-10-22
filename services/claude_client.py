@@ -4,7 +4,6 @@ import time
 import os
 from typing import List, Dict
 from dotenv import load_dotenv
-import streamlit as st
 from config import CLAUDE_MODEL, CLAUDE_INPUT_PRICE, CLAUDE_OUTPUT_PRICE
 
 # Load environment variables
@@ -16,6 +15,7 @@ class ClaudeClient:
         # Try Streamlit secrets first (for deployment)
         api_key = None
         try:
+            import streamlit as st
             api_key = st.secrets.get("ANTHROPIC_API_KEY")
         except:
             pass
@@ -31,7 +31,12 @@ class ClaudeClient:
                 "For Streamlit Cloud: Add ANTHROPIC_API_KEY to your app secrets"
             )
         
-        self.client = anthropic.Anthropic(api_key=api_key)
+        # Initialize without any extra parameters - let the library handle defaults
+        try:
+            self.client = anthropic.Anthropic(api_key=api_key)
+        except TypeError as e:
+            # Fallback for compatibility issues
+            self.client = anthropic.Client(api_key=api_key)
     
     def generate(
         self,
