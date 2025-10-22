@@ -1,0 +1,65 @@
+[
+  {
+    "problem_id": "nutrition_l1_001",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 1,
+    "problem_text": "I want to understand how different foods affect my daily energy levels"
+  },
+  {
+    "problem_id": "nutrition_l1_005",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 1,
+    "problem_text": "I struggle with cravings and don't know how to manage them effectively"
+  },
+  {
+    "problem_id": "nutrition_l1_013",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 1,
+    "problem_text": "I want to make healthy food taste amazing but don't know where to start"
+  },
+  {
+    "problem_id": "nutrition_l2_011",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 2,
+    "problem_text": "I need to learn to recognize my body's hunger and fullness signals better"
+  },
+  {
+    "problem_id": "nutrition_l2_024",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 2,
+    "problem_text": "I'm a teen who wants to eat healthier but my parents buy all the food"
+  },
+  {
+    "problem_id": "nutrition_l3_010",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 3,
+    "problem_text": "I eat emotionally when stressed and want to develop better coping strategies"
+  },
+  {
+    "problem_id": "nutrition_l3_024",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 3,
+    "problem_text": "I need to handle office food culture while maintaining my health goals"
+  },
+  {
+    "problem_id": "nutrition_l4_009",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 4,
+    "problem_text": "I want to use my lab results to customize my nutrition approach"
+  },
+  {
+    "problem_id": "nutrition_l5_010",
+    "domain": "health",
+    "subdomain": "nutrition",
+    "level": 5,
+    "problem_text": "I want to optimize my brain function and focus through advanced nutrition strategies"
+  }
+]

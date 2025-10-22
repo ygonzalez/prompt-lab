@@ -1,0 +1,232 @@
+{
+  "main_system": "Google Maps",
+  "tool_id": "google_maps",
+  "integration_score": 7.0,
+  "last_updated": "2024-08-27",
+  "sub_systems": {
+    "google_maps_mobile_app": {
+      "system_name": "Google Maps Mobile App",
+      "description": "Primary consumer navigation and discovery app",
+      "llm_compatibility": "high_with_gemini",
+      "api_access": "limited_personal_data",
+      "inputs": {
+        "screenshot": {
+          "data_type": "image",
+          "file_formats": ["jpg", "png", "heic"],
+          "max_file_size": "10MB",
+          "attributes": {
+            "image_resolution": "any",
+            "text_extraction": "automatic_ocr",
+            "place_names": "extracted_by_gemini",
+            "context_understanding": "location_mentions"
+          },
+          "processing_method": "gemini_ai_analysis",
+          "llm_prompt_example": "Analyze this screenshot and extract all mentioned place names, restaurants, or locations",
+          "use_cases": [
+            "Extract route information",
+            "Identify places from screenshots",
+            "Analyze saved locations"
+          ]
+        },
+        "voice_command": {
+          "data_type": "audio",
+          "file_formats": ["wav", "mp3", "m4a"],
+          "max_duration": "60_seconds",
+          "attributes": {
+            "language_support": "50+_languages",
+            "intent_recognition": "navigation_discovery_booking",
+            "natural_language": "conversational_queries",
+            "context_awareness": "current_location_time"
+          },
+          "processing_method": "speech_to_text_plus_nlp",
+          "llm_prompt_example": "Process this voice command for location search or navigation request",
+          "use_cases": [
+            "Navigate to destinations",
+            "Search for nearby places",
+            "Get travel time estimates"
+          ]
+        },
+        "text_search": {
+          "data_type": "string",
+          "max_length": "500_characters",
+          "attributes": {
+            "query_types": ["business_name", "address", "category", "natural_language"],
+            "location_context": "current_gps_position",
+            "filters": ["distance", "rating", "price", "hours"],
+            "autocomplete": "predictive_suggestions"
+          },
+          "processing_method": "google_search_algorithm",
+          "llm_prompt_example": "Generate a Maps search query based on user intent: {user_request}",
+          "use_cases": [
+            "Find specific businesses",
+            "Discover restaurants by cuisine",
+            "Locate services nearby"
+          ]
+        },
+        "location_data": {
+          "data_type": "coordinates",
+          "format": "decimal_degrees",
+          "attributes": {
+            "latitude": "float_-90_to_90",
+            "longitude": "float_-180_to_180",
+            "elevation": "meters_above_sea_level",
+            "accuracy": "meters_radius",
+            "timestamp": "unix_timestamp",
+            "source": "gps_network_passive"
+          },
+          "processing_method": "continuous_tracking",
+          "llm_prompt_example": "Based on this location history, what are the user's travel patterns?",
+          "use_cases": [
+            "Track travel patterns",
+            "Analyze commute times",
+            "Identify frequent destinations"
+          ]
+        }
+      },
+      "outputs": {
+        "saved_places_list": {
+          "data_type": "structured_list",
+          "file_formats": ["json", "internal_app_format"],
+          "max_items": "unlimited",
+          "attributes": {
+            "place_name": "string_255_chars",
+            "address": "formatted_address_string",
+            "coordinates": "lat_lng_pair",
+            "category": "business_type_enum",
+            "rating": "float_1_to_5",
+            "user_notes": "string_1000_chars",
+            "save_timestamp": "iso_8601_datetime",
+            "list_name": "user_defined_string"
+          },
+          "export_capability": "limited_sharing_only",
+          "llm_integration": "screenshot_for_analysis"
+        },
+        "route_data": {
+          "data_type": "navigation_object",
+          "file_formats": ["json", "sharing_url"],
+          "attributes": {
+            "origin": "coordinates_or_address",
+            "destination": "coordinates_or_address",
+            "waypoints": "array_of_coordinates",
+            "travel_mode": "driving_walking_transit_cycling",
+            "duration": "seconds_estimated",
+            "distance": "meters_total",
+            "traffic_conditions": "real_time_data",
+            "route_geometry": "encoded_polyline"
+          },
+          "export_capability": "share_link_only",
+          "llm_integration": "text_description_generation"
+        }
+      }
+    },
+    "my_maps": {
+      "system_name": "My Maps (Web Platform)",
+      "description": "Advanced map creation and collaboration tool",
+      "llm_compatibility": "high_via_file_export",
+      "api_access": "full_export_import",
+      "inputs": {
+        "kml_file": {
+          "data_type": "geospatial_file",
+          "file_formats": ["kml", "kmz"],
+          "max_file_size": "5MB",
+          "attributes": {
+            "placemark_count": "unlimited",
+            "layer_support": "10_layers_max",
+            "custom_icons": "supported",
+            "descriptions": "html_formatted",
+            "coordinate_system": "wgs84",
+            "styling_options": "colors_icons_labels"
+          },
+          "processing_method": "xml_parser",
+          "llm_prompt_example": "Parse this KML file and summarize the locations and their relationships",
+          "use_cases": [
+            "Create custom travel maps",
+            "Plan multi-stop routes",
+            "Share location collections"
+          ]
+        },
+        "csv_file": {
+          "data_type": "spreadsheet_data",
+          "file_formats": ["csv"],
+          "max_file_size": "2MB",
+          "required_attributes": {
+            "name": "string_required",
+            "latitude": "float_required",
+            "longitude": "float_required"
+          },
+          "optional_attributes": {
+            "description": "string_up_to_1000_chars",
+            "category": "string_classification",
+            "icon": "predefined_icon_name",
+            "color": "hex_color_code"
+          },
+          "processing_method": "csv_parser_with_geocoding",
+          "llm_prompt_example": "Convert this location data into a structured format for mapping",
+          "use_cases": [
+            "Import location datasets",
+            "Bulk map point creation",
+            "Data visualization"
+          ]
+        }
+      }
+    },
+    "my_timeline": {
+      "system_name": "Google Maps Timeline",
+      "description": "Passive location tracking and trip organization",
+      "llm_compatibility": "excellent_for_pattern_analysis",
+      "api_access": "export_via_google_takeout",
+      "inputs": {
+        "location_tracking": {
+          "data_type": "continuous_gps_stream",
+          "frequency": "every_few_minutes",
+          "attributes": {
+            "coordinates": "lat_lng_elevation",
+            "accuracy": "meters_confidence_radius",
+            "activity_detection": "walking_driving_cycling_transit",
+            "visit_detection": "automatic_stop_identification",
+            "duration_tracking": "arrival_departure_times"
+          },
+          "processing_method": "machine_learning_activity_recognition",
+          "llm_prompt_example": "Analyze location patterns to understand user's lifestyle and preferences",
+          "use_cases": [
+            "Review daily travels",
+            "Track time spent at locations",
+            "Analyze movement patterns"
+          ]
+        }
+      },
+      "outputs": {
+        "timeline_export": {
+          "data_type": "comprehensive_location_history",
+          "file_formats": ["json", "kml"],
+          "export_method": "google_takeout",
+          "attributes": {
+            "visit_records": "timestamped_location_stops",
+            "activity_segments": "travel_between_locations",
+            "confidence_scores": "accuracy_percentages",
+            "place_visits": "business_and_address_identification",
+            "trip_organization": "automatic_journey_grouping",
+            "photo_metadata": "linked_image_context",
+            "user_edits": "manual_corrections_and_notes"
+          },
+          "data_richness": "extremely_detailed_for_ai_training",
+          "llm_compatibility": "ideal_for_preference_learning",
+          "llm_prompt_example": "Analyze this comprehensive location history to build a detailed user preference profile"
+        }
+      }
+    }
+  },
+  "llm_integration_patterns": {
+    "data_ingestion": {
+      "preferred_format": "json_structured_data",
+      "preprocessing_required": true,
+      "token_optimization": "summarize_large_datasets",
+      "context_preservation": "maintain_geographic_relationships"
+    },
+    "prompt_templates": {
+      "location_analysis": "Analyze this location data and identify patterns in user preferences: {data}",
+      "recommendation_generation": "Based on these saved places {favorites}, recommend similar locations in {target_city}",
+      "trip_planning": "Create an itinerary for {destination} based on this user's historical preferences {timeline_data}"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "tool_id": "apple_watch",
+  "display_name": "Apple Watch",
+  "category": "health_fitness",
+  "integration_status": "screenshot_only",
+  "inputs": {
+    "screenshot": {
+      "data_type": "image",
+      "use_cases": [
+        "Daily step count",
+        "Heart rate summary",
+        "Activity rings",
+        "Workout history",
+        "Stand hours",
+        "Exercise minutes",
+        "Calories burned"
+      ]
+    },
+    "health_export": {
+      "data_type": "xml",
+      "use_cases": [
+        "Historical heart rate data",
+        "Sleep analysis",
+        "Workout details",
+        "Heart rate variability",
+        "Blood oxygen levels"
+      ]
+    }
+  },
+  "tags": {
+    "data_types": ["steps", "heart_rate", "calories", "sleep", "exercise"],
+    "domains": ["health", "fitness", "wellness"]
+  }
+}

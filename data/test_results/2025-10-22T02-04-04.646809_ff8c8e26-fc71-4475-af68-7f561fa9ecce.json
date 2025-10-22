@@ -1,0 +1,93 @@
+{
+  "test_id": "ff8c8e26-fc71-4475-af68-7f561fa9ecce",
+  "timestamp": "2025-10-22T02:04:04.646809",
+  "results": {
+    "solutions": [
+      {
+        "title": "Track stress eating triggers with heart data",
+        "prompt": "I want to identify patterns between my stress and emotional eating. I can share my Apple Watch heart rate data from the past week (times when my heart rate was elevated). Help me create a simple tracking system to spot connections between high-stress moments and food cravings, then suggest healthier coping strategies for each trigger situation.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "data_driven",
+          "beginner_friendly",
+          "stress_management"
+        ]
+      },
+      {
+        "title": "Create personalized stress-response action cards",
+        "prompt": "Help me create 5 quick-action cards for emotional eating moments. Each card should have: 1) A 2-minute calming activity 2) A positive self-talk phrase 3) A healthy alternative to stress eating. Make them practical enough that I can save them on my phone and actually use them when cravings hit.",
+        "tools_used": [],
+        "tags": [
+          "practical",
+          "beginner_friendly",
+          "mindfulness"
+        ]
+      },
+      {
+        "title": "Link movement goals to emotional wellbeing",
+        "prompt": "I use an Apple Watch and notice I feel less stressed on days I move more. Looking at my activity rings and step counts, help me design a realistic daily movement plan specifically for stress management. Include small movement breaks I can use instead of reaching for food when stressed.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "exercise",
+          "intermediate",
+          "habit_building"
+        ]
+      },
+      {
+        "title": "Draft mindful eating conversation scripts",
+        "prompt": "Help me create three different internal dialogue scripts for when I'm about to stress eat. Each script should help me pause, assess if I'm actually hungry, and make a conscious choice. Make them short enough to memorize and realistic to use in the moment.",
+        "tools_used": [],
+        "tags": [
+          "psychological",
+          "beginner_friendly",
+          "mindfulness"
+        ]
+      },
+      {
+        "title": "Design stress-tracking experiment with biometrics",
+        "prompt": "I want to run a 5-day experiment using my Apple Watch to understand my stress patterns. Help me create a plan to: 1) Screenshot my heart rate data at key times 2) Note what triggered my stress 3) Record whether I turned to food. Then help me analyze this data to find better coping strategies. Make the tracking simple enough that I'll actually stick with it.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "advanced",
+          "experimental",
+          "data_driven"
+        ]
+      }
+    ],
+    "metadata": {
+      "tokens": 1421,
+      "input_tokens": 805,
+      "output_tokens": 616,
+      "cost_usd": 0.011655,
+      "latency_ms": 11716.209173202515,
+      "model": "claude-3-5-sonnet-20241022",
+      "temperature": 0.8
+    }
+  },
+  "config": {
+    "problem_id": "nutrition_l3_010",
+    "problem_text": "I eat emotionally when stressed and want to develop better coping strategies",
+    "domain": "health",
+    "level": 3,
+    "tools": [
+      "apple_watch"
+    ],
+    "temperature": 0.8,
+    "max_tokens": 4000
+  },
+  "metadata": {
+    "tokens": 1421,
+    "input_tokens": 805,
+    "output_tokens": 616,
+    "cost_usd": 0.011655,
+    "latency_ms": 11716.209173202515,
+    "model": "claude-3-5-sonnet-20241022",
+    "temperature": 0.8
+  }
+}

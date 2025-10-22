@@ -1,0 +1,93 @@
+{
+  "test_id": "ab47db1e-8e25-4236-aa12-82c032272b58",
+  "timestamp": "2025-10-22T00:57:11.672144",
+  "results": {
+    "solutions": [
+      {
+        "title": "Track food and energy using Apple Watch data",
+        "prompt": "I want to understand how food affects my energy. I'll share my daily meals and screenshots of my Apple Watch heart rate and activity data. Can you help me analyze patterns between what I eat and my energy levels (using heart rate, stand hours, and activity as indicators)? Please create a simple tracking template I can use.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "beginner",
+          "data_analysis",
+          "health"
+        ]
+      },
+      {
+        "title": "Create a food-energy diary with smart prompts",
+        "prompt": "Help me create a simple daily food and energy journal. I want to track what I eat at each meal and rate my energy levels (1-10) at different times of day. Please give me a template with specific questions to answer, and help me analyze the patterns after a week of tracking.",
+        "tools_used": [],
+        "tags": [
+          "beginner",
+          "organization",
+          "habit_building"
+        ]
+      },
+      {
+        "title": "Design experiment testing specific food groups",
+        "prompt": "I want to run a 2-week experiment to see how different food groups affect my energy. Can you help me design a structured test where I systematically try different breakfast options (e.g., high-protein vs. high-carb) and track my energy? Include specific foods to try and what to measure.",
+        "tools_used": [],
+        "tags": [
+          "intermediate",
+          "scientific_method",
+          "nutrition"
+        ]
+      },
+      {
+        "title": "Analyze post-meal energy with Watch data",
+        "prompt": "I'll take Apple Watch screenshots 2 hours after different types of meals (showing heart rate and activity data). Can you help me create a system to compare how different meals affect my post-meal energy levels? Let's focus on lunch since that's when I often feel sluggish.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "intermediate",
+          "data_analysis",
+          "nutrition"
+        ]
+      },
+      {
+        "title": "Weekly food-energy review with health data",
+        "prompt": "Each week, I'll share my daily meals and screenshots of my Apple Watch health summary (activity, heart rate, sleep). Can you analyze this data to identify which foods consistently give me the most energy? Please focus on finding clear patterns between my meals and the health metrics.",
+        "tools_used": [
+          "apple_watch"
+        ],
+        "tags": [
+          "advanced",
+          "pattern_recognition",
+          "health_optimization"
+        ]
+      }
+    ],
+    "metadata": {
+      "tokens": 1396,
+      "input_tokens": 803,
+      "output_tokens": 593,
+      "cost_usd": 0.011304,
+      "latency_ms": 10654.492855072021,
+      "model": "claude-3-5-sonnet-20241022",
+      "temperature": 0.8
+    }
+  },
+  "config": {
+    "problem_id": "nutrition_l1_001",
+    "problem_text": "I want to understand how different foods affect my daily energy levels",
+    "domain": "health",
+    "level": 1,
+    "tools": [
+      "apple_watch"
+    ],
+    "temperature": 0.8,
+    "max_tokens": 4000
+  },
+  "metadata": {
+    "tokens": 1396,
+    "input_tokens": 803,
+    "output_tokens": 593,
+    "cost_usd": 0.011304,
+    "latency_ms": 10654.492855072021,
+    "model": "claude-3-5-sonnet-20241022",
+    "temperature": 0.8
+  }
+}
