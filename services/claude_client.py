@@ -4,6 +4,7 @@ import time
 import os
 from typing import List, Dict
 from dotenv import load_dotenv
+import streamlit as st
 from config import CLAUDE_MODEL, CLAUDE_INPUT_PRICE, CLAUDE_OUTPUT_PRICE
 
 # Load environment variables
@@ -11,13 +12,23 @@ load_dotenv()
 
 class ClaudeClient:
     def __init__(self):
-        """Initialize Claude client with API key from .env"""
-        api_key = os.getenv('ANTHROPIC_API_KEY')
+        """Initialize Claude client with API key from .env or Streamlit secrets"""
+        # Try Streamlit secrets first (for deployment)
+        api_key = None
+        try:
+            api_key = st.secrets.get("ANTHROPIC_API_KEY")
+        except:
+            pass
+        
+        # Fall back to environment variable (for local development)
+        if not api_key:
+            api_key = os.getenv('ANTHROPIC_API_KEY')
         
         if not api_key:
             raise Exception(
                 "ANTHROPIC_API_KEY not found. "
-                "Create a .env file with: ANTHROPIC_API_KEY=sk-ant-your-key"
+                "For local: Create a .env file with: ANTHROPIC_API_KEY=sk-ant-your-key\n"
+                "For Streamlit Cloud: Add ANTHROPIC_API_KEY to your app secrets"
             )
         
         self.client = anthropic.Anthropic(api_key=api_key)

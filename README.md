@@ -2,7 +2,7 @@
 
 A simple local tool for testing AI prompt generation strategies that help everyday people use AI tools to solve real-life problems.
 
-## Quick Start
+## Quick Start (Local Development)
 
 ### 1. Install Dependencies
 ```bash
@@ -29,6 +29,27 @@ streamlit run app.py
 ```
 
 Open your browser to `http://localhost:8501`
+
+## Deployment to Streamlit Community Cloud
+
+### 1. Fork/Clone Repository
+Push your code to GitHub (make sure `.env` is NOT included)
+
+### 2. Deploy on Streamlit Cloud
+1. Go to [share.streamlit.io](https://share.streamlit.io)
+2. Connect your GitHub repository
+3. Select `app.py` as the main file
+
+### 3. Add Secrets
+In your Streamlit app settings, go to "Secrets" and add:
+```toml
+ANTHROPIC_API_KEY = "sk-ant-your-api-key-here"
+```
+
+### 4. Deploy
+Click "Deploy" and your app will be live!
+
+**Security Note**: Never commit your `.env` file or API keys to GitHub. Always use Streamlit Secrets for deployment.
 
 ## Data Format
 
